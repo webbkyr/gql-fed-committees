@@ -1,0 +1,26 @@
+type Query {
+  getCommittee(id: ID!): Committee
+}
+
+type Committee {
+  id: ID!
+  chamber: String!
+  name: String!
+  jurisdiction: String
+  url: String
+  minorityUrl: String
+  thomasId: String!
+  subcommittees: [Committee]!
+  offices: [Office]
+}
+
+enum Control {
+  MAJ,
+  MIN
+}
+
+type Office {
+  control: Control
+  address: String!
+  phone: String!
+}

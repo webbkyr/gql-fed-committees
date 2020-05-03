@@ -1,0 +1,7 @@
+schema: schema.graphql
+generates:
+  ./src/types.ts:
+    plugins:
+      - typescript
+    config:
+      federation: true
